@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "clinical-data-hub": "apps/clinical-data-hub",
+    "clinical-data-hub-e2e": "apps/clinical-data-hub-e2e"
+  }
+}

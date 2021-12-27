@@ -1,0 +1,28 @@
+{
+  "root": "apps/clinical-data-hub-e2e",
+  "sourceRoot": "apps/clinical-data-hub-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/clinical-data-hub-e2e/cypress.json",
+        "devServerTarget": "clinical-data-hub:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "clinical-data-hub:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/clinical-data-hub-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["clinical-data-hub"]
+}
